@@ -1,0 +1,122 @@
+% ====
+% Exam
+% ====
+
+\documentclass[a4paper,ngerman]{article}
+
+% Load external packages
+
+\usepackage{subfiles}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[top=3cm, bottom=3cm, left=3.5cm, right=3.5cm]{geometry}
+
+% Load custom packages
+
+\providecommand{\packages}{../latex_packages}
+\usepackage{\packages/my_lehre_paketten}
+\usepackage{\packages/my_lehre}
+
+% Load exercises
+
+\input{aufgaben.tex}
+
+% Set heeaders and footers
+
+\usepackage{fancyhdr}
+\setlength{\headheight}{15.2pt}
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyfoot[C]{\thepage}
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}}
+\fancyhf[HL]{
+	% Klausur zur Analysis 2, 25.02.2017
+	}
+\fancyhf[HR]{
+	Name: \hphantom{Max Mustermann von Musterwald} 
+	% Matrikelnr.: \hphantom{1234567}
+	}
+
+% Formating
+
+\newcommand{\NeueSeite}{\clearpage\thispagestyle{plain}\mbox{}\clearpage}
+\renewcommand{\PunkteL}[1]{}
+
+\begin{document}
+%
+% ==========
+% Title page
+% ==========
+%
+% \pagestyle{fancy}
+% \thispagestyle{plain}
+% %
+% \AnaIIWSXVI{Klausur zur Analysis 2 \\[1ex] \normalsize{\normalfont 25. Februar 2017}}
+% %
+% Vorname:\ \hrulefill \\[\baselineskip]
+% Nachname:\ \hrulefill \\[\baselineskip]
+% Studienfach:\ \hrulefill \\[\baselineskip]
+% Matrikelnummer:\ \hrulefill \\[\baselineskip]
+% Kennwort (max. 8 Zeichen):\ \hrulefill \\[\baselineskip]
+% $\square$ \quad \parbox[t]{13cm}{Ich stimme zu, dass mein Kennwort zusammen mit meiner Punktzahl oder Note im Digicampus veröffentlicht werden darf.}\\[1.5\baselineskip]
+% Unterschrift:\ \hrulefill
+% %
+% \vspace{1\baselineskip}
+%%
+% \begin{center}
+% \begin{tabu} to \textwidth {|*{8}{>{\centering}X[m]|}|>{\centering}X[1.5,m,c]|}\hline 
+%  \rowfont{\large\bfseries}  1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Gesamt \\ \hline\hline
+%   \rule[-1.3em]{0pt}{3em}   &  &  &   &   &  & & &  \\ \hline
+%   \rule[-1.3em]{0pt}{3em} &   &   &   &   &   & & & \\ \hline
+% \end{tabu}
+% \end{center}
+%
+% \vfill
+% %
+% \noindent {\bf\large Beachten Sie:}
+% \begin{itemize}
+% 	\item Die Bearbeitungszeit beträgt \textbf{180 Minuten}. 
+% 	Bei jeder Aufgabe finden Sie Zeitangaben. Diese können Sie bei Ihrer Zeiteinteilung berücksichtigen.
+% 		\item Es gibt \textbf{8 Aufgaben}. Überprüfen Sie, ob Ihre Klausur aus \textbf{20 Seiten} besteht. Das letzte Blatt ist ein Zusatzblatt. \textbf{Schreiben Sie nicht mit Bleistift oder Rotstift}.
+% 	\item \textbf{Alle Behauptungen, Berechnungen, Resultate u.Ä. müssen begründet werden}. 
+% 		Sie dürfen die Resultate aus der Vorlesung und den Übungen verwenden, 
+% 		müssen sie aber klar anführen. Wird aber explizit nach einem Beweis aus der Vorlesung gefragt, so ist ein vollständiger Beweis anzugeben.
+% 	\item \textbf{Ihre Antworten sollen eindeutig sein.}
+% 		Falls Sie erkennen, dass Ihre ursprünglichen Überlegungen falsch waren, kennzeichnen Sie deutlich, was zu berücksichtigen ist.
+% 	\item \textbf{Es sind keine Hilfsmittel erlaubt.} Jeder Versuch, sie trotzdem zu 
+% 		verwenden, führt zum automatischen Nichtbestehen.
+% 	\item \textbf{Merken Sie sich das geschriebene Kennwort}. Unter diesem werden Sie Ihre Note im 	Digicampus finden.
+% 	%\item \textbf{Bei Aufgabe 8 ist deutlich anzugeben, ob die Aussage wahr oder falsch ist.} Sollten wir bei einer Teilaufgabe kein wahr oder falsch finden, können Sie in dieser Teilaufgabe nicht die volle Punktzahl erreichen.
+% \end{itemize}
+% %
+% \vfill
+% \begin{center}
+% \textbf{Das ganze Analysis 2 Team wünscht Ihnen viel Erfolg.}
+% \end{center}
+%
+%\NeueSeite
+%
+% ========
+% Problems
+% ========
+%
+\begin{Prob}
+% \KAI
+\end{Prob}
+%
+\NeueSeite
+%
+% ...
+%
+% =======================================
+% A couple of empty pages for computations
+% ========================================
+%
+\NeueSeite
+\clearpage\mbox{}\clearpage
+\NeueSeite
+%
+% ...
+%
+\end{document}

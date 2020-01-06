@@ -1,0 +1,86 @@
+% ================
+% Solution to exam
+% ================
+
+\documentclass[a4paper,ngerman]{article}
+
+% Load external packages
+
+\usepackage{subfiles}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[top=3cm, bottom=3cm, left=3.5cm, right=3.5cm]{geometry}
+
+% Load custom packages
+
+\providecommand{\packages}{../latex_packages}
+\usepackage{\packages/my_lehre_paketten}
+\usepackage{\packages/my_lehre}
+
+% Load exercises and solutions 
+
+\input{aufgaben.tex}
+\input{loesungen.tex}
+
+% Formating
+
+\newcommand{\NeueSeite}{\clearpage}
+\newcommand{\NeueDoppleSeite}{\clearpage\thispagestyle{plain}\mbox{}\clearpage}
+\pagestyle{plain}
+
+\begin{document}
+%
+% ===========================================
+% Title page with points-to-grade assignement
+% ===========================================
+%
+% \AnaIIWSXVI{\rule{0cm}{2\baselineskip}Musterlösung zur Klausur zur Analysis 2}
+%
+% \vspace{2\baselineskip}
+% \textbf{\Large Punkteverteilung:} \vspace{\baselineskip}
+% \begin{center}
+% \large
+% \begin{tabu} to \textwidth {|*{8}{>{\centering}X[m]|}|>{\centering}X[1.5,m,c]|}\hline 
+%  \rowfont{\large\bfseries}  1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & Gesamt \\ \hline\hline
+%    \rule[-.75em]{0pt}{2em}  25 & 15 & 10 & 25 & 20 & 25 & 25 & 25 &170  \\ \hline
+% \end{tabu}
+% \end{center}
+% \vspace{2\baselineskip}
+% \textbf{\Large Notenschlüssel:} \vspace{\baselineskip}
+% \begin{center}
+% \large 
+% \begin{tabu} to \textwidth {|*{2}{>{\centering}X[1.5,m,c]|}}\hline 
+%  \rowfont{\large\bfseries} Klausurpunkte & Note \\  \hline\hline
+%   170 - 158 & 1.0 \\
+%   157.5 - 148 & 1.3 \\
+%   147.5 - 138 & 1.7 \\ \hline 
+%   137.5 - 128 & 2.0 \\
+%   127.5 - 118 & 2.3 \\
+%   117.5 - 108 & 2.7 \\\hline 
+%   107.5 - 98 & 3.0 \\ 
+%   97.5 - 88 & 3.3 \\
+%   87.5 - 78 & 3.7 \\\hline
+%   77.5 - 68 & 4.0 \\
+%   67.5 - 0 & nicht bestanden \\ \hline
+% \end{tabu}
+% \end{center}
+%
+% \NeueDoppleSeite
+%
+% ========================
+% Statements and solutions
+% ========================
+%
+\begin{Prob}
+% \KAI
+\end{Prob}
+%
+\begin{Loes}
+% \KLI
+\end{Loes}
+%
+\NeueSeite
+%
+% ...
+%
+\end{document}

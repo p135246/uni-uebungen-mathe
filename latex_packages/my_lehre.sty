@@ -1,0 +1,180 @@
+
+
+% Durchgestrichene Pfeile
+\newcommand{\nlongleftrightarrow}{{\tikz[baseline=(char.base)]{
+            \node (char) {$\Longleftrightarrow$};
+            \draw[thin] (-3.2pt,-3pt)--(3pt,4pt);}}}
+\newcommand{\nlongrightarrow}{{\tikz[baseline=(char.base)]{
+            \node (char) {$\Longrightarrow$};
+            \draw[thin] (-3.2pt,-3pt)--(3pt,4pt);}}}
+       
+% Liste von Lösungen  
+\newlist{Aequivalenz}{description}{1}
+\setlist[Aequivalenz]{labelsep=10pt,font=\itshape\rmfamily\mdseries,leftmargin=5pt}  
+\newlist{Induktion}{description}{1}
+\setlist[Induktion]{labelsep=10pt,font=\itshape\rmfamily\mdseries,leftmargin=5pt}   
+\newlist{LoesListNum}{enumerate}{2}
+\setlist[LoesListNum]{leftmargin=0cm,itemindent=*,label=\arabic*)}
+\newlist{LoesListAlph}{enumerate}{2}
+\setlist[LoesListAlph]{leftmargin=0cm,itemindent=*,label=\alph*)}
+\newlist{AufgListNum}{enumerate}{2}
+\setlist[AufgListNum]{label=\arabic*)}
+\newlist{AufgListAlph}{enumerate}{2}
+\setlist[AufgListAlph]{label=\alph*)}
+\newlist{GleichListNum}{enumerate}{2}
+\setlist[GleichListNum]{before=\everymath{\displaystyle},leftmargin=0cm,itemindent=*,label=\arabic*)}
+\newlist{GleichListAlph}{enumerate}{2}
+\setlist[GleichListAlph]{before=\everymath{\displaystyle},leftmargin=0cm,itemindent=*,label=\alph*)}
+
+
+% Implikation und Äquivalenz
+\newcommand{\NImpl}{\nlongrightarrow}
+\newcommand{\RImpl}{\@ifstar\@@RImpl\@RImpl}
+\newcommand{\@RImpl}{\Longleftarrow}
+\newcommand{\@@RImpl}{\quad\Longleftarrow\quad}
+\newcommand{\Impl}{\@ifstar\@@Impl\@Impl}
+\newcommand{\@Impl}{\Longrightarrow}
+\newcommand{\@@Impl}{\quad\Longrightarrow\quad}
+\newcommand{\Aequiv}{\@ifstar\@@Aequiv\@Aequiv}
+\newcommand{\@Aequiv}{\Longleftrightarrow}
+\newcommand{\@@Aequiv}{\Longleftrightarrow}
+
+
+% Margin Notes und Punkte un Zeit
+\newcommand{\KommentR}[1]{\normalmarginpar\marginnote{\Red{#1}}}
+\newcommand{\KommentL}[1]{\reversemarginpar\marginnote{\Red{#1}}}
+\newcommand{\ZeitR}[1]{\normalmarginpar\marginnote{\textit{#1}}}
+\newcommand{\ZeitL}[1]{\reversemarginpar\marginnote{\textit{#1}}}
+\newcommand{\PunkteR}[1]{\KommentR{\Red{#1 P.}}}
+\newcommand{\PunkteL}[1]{\KommentL{\Red{#1 P.}}}
+
+% Hinweis
+\newcommand{\Hinweis}{\@ifstar\@@Hinweis\@Hinweis}
+\newcommand{\@Hinweis}[1]{\textit{Hinweis: #1}}
+\newcommand{\@@Hinweis}[1]{\par\textit{Hinweis: #1}\par}
+
+
+% Bitte Wenden
+\newcommand{\BitteWenden}{\begin{tikzpicture}[remember picture, overlay]
+\node at($(current page.south east)+(-2,2)$) [anchor=south east] {\textbf{Bitte wenden!}};
+\end{tikzpicture}}
+
+% Köpfe
+\newcommand{\LAIWSXIV}[1]{\noindent\textbf{Universit\"at Augsburg} \hfill \textbf{Prof. Dr. Kai Cieliebak} \\
+\textbf{Wintersemester 2014} \hfill \textbf{Pavel H\'ajek} \\
+\textbf{Lineare Algebra I} \hfill \textbf{Kathrin Helmsauer}\\
+\vspace{0.15cm}
+\begin{center} \textbf{\Large #1} \end{center}
+\vspace{1cm}}
+
+\newcommand{\LAIISSXV}[1]{\noindent\textbf{Universit\"at Augsburg} \hfill \textbf{Prof. Dr. Kai Cieliebak} \\
+\textbf{Sommersemester 2015} \hfill \textbf{Pavel H\'ajek} \\
+\textbf{Lineare Algebra II} \hfill \textbf{Kathrin Helmsauer}\\
+\vspace{0.15cm}
+\begin{center} \textbf{\Large #1} \end{center}
+\vspace{1cm}}
+
+\newcommand{\AnaISSXVI}[1]{\noindent\textbf{Universit\"at Augsburg} \hfill \textbf{Prof. Dr. Urs Frauenfelder} \\
+\textbf{Sommersemester 2016} \hfill \textbf{Veronika Auer} \\
+\textbf{Analysis 1} \hfill \textbf{Pavel H\'ajek}\\
+\vspace{0.15cm}
+\begin{center} \textbf{\Large #1} \end{center}
+\vspace{1cm}}
+
+\newcommand{\AnaIIWSXVI}[1]{\noindent\textbf{Universit\"at Augsburg} \hfill \textbf{Prof. Dr. Urs Frauenfelder} \\
+\textbf{Wintersemester 2016} \hfill \textbf{Veronika Auer} \\
+\textbf{Analysis 2} \hfill \textbf{Pavel H\'ajek}\\
+\vspace{0.15cm}
+\begin{center} \textbf{\Large #1} \end{center}
+\vspace{1cm}}
+
+% Fußzeilen
+
+\newcommand{\AbgabeAnaIIWSXVI}[1]{\vfill Sie können Ihre Lösungen bis zum Mittwoch, den #1, 11:30 Uhr in dem Briefkasten Analysis II am Haupteingang des Instituts für Mathematik abgeben. Schreiben Sie bitte auf Ihre (zusammengehefteten) Aufgabenblätter Ihre Namen und Ihre Übungsgruppennummer. Die Rückgabe erfolgt in den Übungen. }
+
+% Ableitung
+\newcommand{\Abl}{\@ifstar\@@Abl\@Abl} % \Abl[2]{x^2}{x}
+\newcommand{\@Abl}[3][]{\ifx\\#1\\
+    \frac{\operatorname{d#2}}{\operatorname{d#3}}
+  \else
+    \frac{\operatorname{d^{#1}#2}}{\operatorname{d#3}^{#1}}
+  \fi
+} % Als Quotient
+\newcommand{\@@Abl}[3][]{\ifx\\#1\\
+    \frac{\operatorname{d}}{\operatorname{d#3}}#2
+  \else
+    \frac{\operatorname{d^{#1}}}{\operatorname{d#3}^{#1}}#2
+  \fi
+} % Als Operator
+
+% Partial Ableitung
+\newcommand{\PAbl}{\@ifstar\@@PAbl\@PAbl} % \PAbl[2]{x^2}{x}
+\newcommand{\@PAbl}[3][]{\ifx\\#1\\
+    \frac{\operatorname{\partial #2}}{\operatorname{\partial #3}}
+  \else
+    \frac{\operatorname{\partial^{#1}#2}}{\operatorname{\partial #3}^{#1}}
+  \fi
+} % Als Quotient
+\newcommand{\@@PAbl}[3][]{\ifx\\#1\\
+    \frac{\operatorname{\partial}}{\operatorname{\partial #3}}#2
+  \else
+    \frac{\operatorname{\partial^{#1}}}{\operatorname{\partial #3}^{#1}}#2
+  \fi
+} % Als Operator
+
+% Doppelte Partial Ableitung
+\newcommand{\PPAbl}{\@ifstar\@@PPAbl\@PPAbl} 
+\newcommand{\@PPAbl}[3]{\frac{\operatorname{\partial^2 #1}}{\operatorname{\partial #2\partial #3}}}
+\newcommand{\@@PPAbl}[3]{\frac{\operatorname{\partial^2}}{\operatorname{\partial #2\partial #3}}#1}
+
+% Kommentar unter einem Zeichen
+\newcommand{\Komment}{\@ifstar\@Komment\@@Komment} % \Komment[2ex]{=}{Nach Korrolar}
+\newcommand{\@Komment}[3][2ex]{\underset{\substack{\rule[-5pt]{0.3pt}{#1}\\[1pt]#2}}{#3}} % Ohne \mathclap 
+\newcommand{\@@Komment}[3][2ex]{\underset{\mathclap{\substack{\rule[-5pt]{0.3pt}{#1}\\[1pt]#2}}}{#3}} % Mit \mathclap
+
+
+\newcommand{\PartInt}[4]{\text{PI}:\; \begin{aligned}[t]  u&=#1 & v^\prime&=#2 \\ u^\prime&=#3 & v&=#4
+\end{aligned}}
+
+\newcommand{\Subst}[1]{\text{S}:\; \begin{aligned}[t]
+										#1 					
+							   \end{aligned}}
+
+% Folge
+\newcommand{\F}[2][n]{\left ( #2 \right )_{#1 \in \N}}
+
+% Limes einer Folge 
+\newcommand{\FLim}[1][n]{\lim_{#1 \to \infty}}
+
+% Limsup einer Folge
+\newcommand{\FLimSup}[1][n]{\limsup_{#1 \to \infty}}
+
+% Liminf einer Folge
+\newcommand{\FLimInf}[1][n]{\liminf_{#1 \to \infty}}
+
+% Reihe
+\newcommand{\Reihe}[1][n]{\sum_{#1=1}^\infty}
+
+% Skalarprodukt
+\newcommand{\SkalProd}[2]{\left\langle #1, #2\right\rangle}
+
+% Abschluss
+\newcommand{\Abschl}[1]{\overline{#1}}
+
+% Inklusion
+
+\newcommand{\Inkl}{\iota}
+
+% Quotient
+
+\newcommand{\Quot}[1]{#1/\mathord{\sim}}
+
+% AMSthm
+\theoremstyle{definition}
+\newtheorem{Prob}{Aufgabe}
+\newtheorem{Loes}{L\"osung}
+\newtheorem{Lem}{Lemma}
+\newtheorem{Beh}{Behauptung}
+\newtheorem{Thm}{Theorem}
+\newtheorem{Kor}{Korrolar}
+\newtheorem{Bem}{Bemerkung}

@@ -1,0 +1,52 @@
+% ===============================================
+% Collection of all exercises and their solutions
+% ===============================================
+
+\documentclass[a4paper,ngerman]{article}
+
+% Load external packages
+
+\usepackage{subfiles}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[top=3cm, bottom=3cm, left=3.5cm, right=3.5cm]{geometry}
+
+% Load custom packages
+
+\providecommand{\packages}{../latex_packages}
+\usepackage{\packages/my_lehre_paketten}
+\usepackage{\packages/my_lehre}
+
+% Load exercises, solutions and notes 
+
+\input{../blaetter/aufgaben}
+\input{loesungen}
+\input{bemerkungen}
+
+% Disable formating of separate exercise shees and solutions
+
+\renewcommand{\AnaIIWSXVI}[1]{}
+\renewcommand{\AbgabeAnaIIWSXVI}[1]{}
+\renewcommand{\BitteWenden}{}
+\renewcommand{\NeueSeite}{}
+\renewcommand{\PunkteL}[1]{}
+\renewcommand{\PunkteR}[1]{}
+
+% New formating
+
+\newlength\LoesAbst % Vertical space between solutions
+\setlength\LoesAbst{0.3cm}
+\setlength\parskip{5pt}
+\pagestyle{plain}
+
+\begin{document}
+%
+% =============================
+% Insert all separate solutions
+% =============================
+%
+% \subfile{loesung1.tex}
+% \subfile{loesung2.tex}
+% ...
+%
+\end{document}
